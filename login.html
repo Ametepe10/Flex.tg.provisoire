@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+    <!-- CSS file -->
+    <link rel="stylesheet" href="Style.css" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="navbar">
+        <div class="logo">
+          <img src="img/logo new2re.png" />
+        </div>
+        <nav class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li><a href="./index.html #" class="nav-link active">accueil</a></li>
+            <li><a href="./index.html  #apropos" class="nav-link">a propos</a></li>
+            <li><a href="./index.html #reservation" class="nav-link">Services</a></li>
+            <li><a href="./index.html #promotion" class="nav-link">promotions </a></li>
+            <li><a href="./index.html #ateliers" class="nav-link">salons</a></li>
+            <li><a href="./index.html #contact" class="nav-link">contacts</a></li>
+            <li><a href="./login.html" class="btnlogin">Connexion</a></li>
+          </ul>
+
+        </nav>
+        <div class="nav-toggle" id="nav-toggle">
+            <!-- Icône Bars-->
+            <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </header>
+       
+       <!-- Start Login Section-->
+       <section id="login">
+        <div class="wrapper">
+          <div class="form-box login">
+            <h2>Connexion</h2>
+            <form action="login.php" method="post">
+              <div class="imput-box">
+                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                <input type="email" required>
+                <label>E-mail</label>
+            </div>
+            <div class="imput-box">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" required>
+              <label>Mot de passe</label>
+          </div>
+          <div class="remember-forget">
+            <label><input type="checkbox">Se souvenir</label>
+            <a href="#">Mot de passe oublié</a>
+          </div>
+          <button type="submit" class="btnlog"> connexion</button>
+          <div class="login-register">
+            <p>je n'ai pas de compte<a href="inscription.html" class="register-link">  s'inscrire</a></p>
+          </div>
+            </form>
+          </div>
+        </div>
+                
+    </section>
+
+        <!-- End Login Section-->
+        <script src="main.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+</body>
+</html>

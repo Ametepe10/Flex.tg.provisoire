@@ -1,0 +1,38 @@
+<?php 
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+//retrieve form data
+$username = $_POST["username"];
+$password = $_POST["password"];
+
+// Database Connexion
+$host ="localhost";
+$dbusername = "root";
+$dbpassword ="";
+$dbname ="authflex";
+
+$conn =new mysqli($host, $dbusername, $dbpassword, $dbname);
+
+if($conn->connect_error){
+    die("Connexion echouée : ". $conn->connect_error);
+
+}
+
+// validate login authentification
+
+$query = "SELECT *FROM login WHERE username = '$username' AND password ='$password'";
+
+$result = $conn->query($query);
+
+if($result->num_rows == 1){
+    //login success
+    header("Location :sucess.html");
+    exit();
+}
+else{
+    //login failed
+    header("Location :error.html");
+    exit();
+}
+   $conn->close();
+}
+?>
