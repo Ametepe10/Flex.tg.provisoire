@@ -25,23 +25,16 @@
         <nav class="nav-menu" id="nav-menu">
           <ul class="nav-list">
             <li><a href="#" class="nav-link active">accueil</a></li>
+            <li><a href="#apropos" class="nav-link">a propos</a></li>
             <li><a href="#reservation" class="nav-link">Services</a></li>
+            <li><a href="#promotion" class="nav-link">promotions </a></li>
             <li><a href="#boutique" class="nav-link">boutique</a></li>
-            <li class="dropdown">
-              <a href="#" class="nav-link">Découvrir plus <i class="fas fa-caret-down"></i></a>
-              <ul class="dropdown-menu">
-                <li><a href="#apropos">A propos</a></li>
-                <li><a href="#promotion">Promotions</a></li>
-                <li><a href="#ateliers">Salons</a></li>
-                <li><a href="#temoignages">Témoignages</a></li>
-              </ul>
-            </li>
+            <li><a href="#ateliers" class="nav-link">salons</a></li>
             <li><a href="#contact" class="nav-link">contacts</a></li>
             <li><a href="./login.html" class="btnlogin">Connexion</a></li>
           </ul>
 
         </nav>
-
         <div class="nav-toggle" id="nav-toggle">
             <!-- Icône Bars-->
             <i class="fa-solid fa-bars"></i>
@@ -131,8 +124,6 @@
                   </a>
               
             </div>
-  
-
        <!-- 🔔 Start Bannière défilante -->
 <div class="pub-banner">
   <div class="scrolling-text">
