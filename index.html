@@ -28,7 +28,7 @@
             <li><a href="#reservation" class="nav-link">Services</a></li>
             <li><a href="#boutique" class="nav-link">boutique</a></li>
             <li class="dropdown">
-              <a href="#" class="nav-link">Découvrir plus <i class="fas fa-caret-down"></i></a>
+              <a href="#" class="nav-link dropdown-toggle">Découvrir plus <i class="fas fa-caret-down"></i></a>
               <ul class="dropdown-menu">
                 <li><a href="#apropos">A propos</a></li>
                 <li><a href="#promotion">Promotions</a></li>
@@ -36,8 +36,9 @@
                 <li><a href="#temoignages">Témoignages</a></li>
               </ul>
             </li>
+            
             <li><a href="#contact" class="nav-link">contacts</a></li>
-            <li><a href="./login.html" class="btnlogin">Connexion</a></li>
+            <!--<li><a href="./login.html" class="btnlogin">Connexion</a></li>-->
           </ul>
 
         </nav>
@@ -125,9 +126,8 @@
                 <h2>Promotions du mois</h2>
                 <p>Profitez de 20% de réduction sur votre première réservation !</p>
                 
-                <a href="https://wa.me/22890616989?text=bonjour%20Flex,%20j'aimerais%20avoir%20quelques%20informations%20s'il%20vous%20plaît%20Merci" class="btn btn-outline">
-                  <i class="fab fa-whatsapp" target="_blank"></i> 
-                  Nous contactez
+               <a href="https://wa.me/22872069607?text=Bonjour%20Flex%2C%20je%20souhaite%20obtenir%20plus%20d'informations%20sur%20vos%20services%20et%20vos%20disponibilit%C3%A9s.%20Merci%20!" class="btn btn-outline" target="_blank">
+               <i class="fab fa-whatsapp"></i>Nous contactez
                   </a>
               
             </div>
@@ -300,108 +300,121 @@
   </div>
   
   <!-- End Reservation Section-->
-    <!-- Start Boutique Section-->
-    <section class="boutique" id="boutique">
-      <div class="section-title">
-        <h1>Boutique</h1>
-        <span>Votre Elegance notre préoccupation</span>
-        <p>Faites votre choix</p>
-      </div>
-      <div class="filter-container">
-        <label for="category">Filtrer par catégorie :</label>
-        <select id="category" onchange="filterProducts()">
-            <option value="all">Tous</option>
-            <option value="cheveux">Cheveux</option>
-            <option value="visage">Visage & peau</option>
-            <option value="ongles">Ongles</option>
-            <option value="perruque">Perruques</option>
-            <option value="perruque">Meches</option>
-            <option value="perruque">Barbes</option>
-        </select>
+<!-- Start Boutique Section -->
+<section class="boutique" id="boutique">
+  <div class="section-title">
+    <h1>Boutique</h1>
+    <span>Votre Élégance, notre préoccupation</span>
+    <p>Faites votre choix</p>
+  </div>
+
+  <div class="filter-container">
+    <label for="category">Filtrer par catégorie :</label>
+    <select id="category" onchange="filterProducts()">
+      <option value="all">Tous</option>
+      <option value="cheveux">Cheveux</option>
+      <option value="visage">Visage & peau</option>
+      <option value="ongles">Ongles</option>
+      <option value="perruques">Perruques</option>
+      <option value="meches">Mèches</option>
+      <option value="barbes">Barbes</option>
+    </select>
+  </div>
+
+  <div class="product-grid" id="productGrid">
+
+    <!-- Produit 1 -->
+    <div class="product" data-category="perruques">
+      <img src="img/P1.png" alt="Perruque synthétique">
+      <h3>Perruque synthétique</h3>
+      <p>Lisse / Bouclé / Ondulé / Frisé / Coupe carrée</p>
+      <p class="price">10 000 F CFA</p>
+      <a href="https://wa.me/22872069607?text=Bonjour%20Flex%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20vos%20perruques%20synth%C3%A9tiques%20(Lisse%2C%20Boucl%C3%A9e%2C%20Ondul%C3%A9e%2C%20Fris%C3%A9e%2C%20Coupe%20Carr%C3%A9e).%20Pourriez-vous%20m%E2%80%99en%20dire%20plus%20ou%20me%20guider%20pour%20l%E2%80%99achat%20%3F%20Merci%20!" class="btn3" target="_blank">
+        <i class="fab fa-whatsapp"></i> Commander
+      </a>
     </div>
 
-    <div class="product-grid" id="productGrid">
-        <!-- Produits -->
-        <div class="product" data-category="Perruques">
-          <img src="img/P1.png" alt="perruque synthetique">
-          <h3>perruque synthetique</h3>
-          <p>Lisse/Bouclé/ondulé/frisé/coupe carrée</p>
-          <p class="price">10 000 F CFA</p>
-          <a href="https://wa.me/22890616989?" class="btn3">
-            Commander
-            </a>
-      </div>
-        <div class="product" data-category="Cheveux">
-            <img src="img/p3.png" >
-            <h3>Shampooing capillaire</h3>
-            <p>Anti-chute de cheveux bio</p>
-            <p class="price">5 000 F CFA</p>
-            <a href="https://wa.me/22890616989?" class="btn3">
-              Commander
-              </a>
-        </div>
-        <div class="product" data-category="Perruques">
-          <img src="img/p2.png" alt="perruque naturel">
-          <h3>perruque naturel</h3>
-          <p>Lisse/Bouclé/ondulé/frisé/coupe carrée</p>
-          <p class="price">25 000 F CFA</p>
-          <a href="https://wa.me/22890616989?" class="btn3">
-            Commander
-            </a>
-      </div>
-        <div class="product" data-category="Barbes">
-          <img src="img/Pousse-barbe.png">
-          <h3>Pousse-barbe</h3>
-          <p>huile naturel pour faire pousser la barbe</p>
-          <p class="price">4 000 F CFA</p>
-          <a href="https://wa.me/22890616989?" class="btn3">
-            Commander
-            </a>
-      </div>
-      <div class="product" data-category="Meches">
-        <img src="img/meche 2.png">
-        <h3>Meche naturelle</h3>
-        <p>Brazilien, Peruvien, Indien, Malaysien</p>
-        <p class="price">5 000 F CFA</p>
-        <a href="https://wa.me/22890616989?" class="btn3">
-          Commander
-          </a>
-    </div>
-    <div class="product" data-category="Meches">
-      <img src="img/Meche bre on.png">
-      <h3>Crochet braids</h3>
-      <p>Boucles/curly/crépu/Locs/twists</p>
+    <!-- Produit 2 -->
+    <div class="product" data-category="cheveux">
+      <img src="img/p3.png" alt="Shampooing capillaire">
+      <h3>Shampooing capillaire</h3>
+      <p>Anti-chute de cheveux bio</p>
       <p class="price">5 000 F CFA</p>
-      <a href="https://wa.me/22890616989?" class="btn3">
-        Commander
-        </a>
-  </div>
-  <div class="product" data-category="Meches">
-    <img src="img/meche 3.png">
-    <h3>Meche</h3>
-    <p>Boucles/curly/crépu/Locs/twists</p>
-    <p class="price">3 000 F CFA</p>
-    <a href="https://wa.me/22890616989?" class="btn3">
-      Commander
+      <a href="https://wa.me/22872069607?text=Bonjour%20Flex%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20votre%20shampooing%20capillaire%20anti-chute%20bio.%20Pourriez-vous%20m%E2%80%99en%20dire%20plus%20ou%20me%20guider%20pour%20l%E2%80%99achat%20%3F%20Merci%20!" class="btn3" target="_blank">
+        <i class="fab fa-whatsapp"></i> Commander
       </a>
-</div>
-<div class="product" data-category="Meches">
-  <img src="img/meche 3.png">
-  <h3>Meche naturelle</h3>
-  <p>Naturelle(blonde/noire)</p>
-  <p class="price">5 000 F CFA</p>
-  <a href="https://wa.me/22890616989?" class="btn3">
-    Commander
-    </a>
-</div>
-        
-        
-        
-        
-    </div> 
-      
-    </section>
-     <!-- End Boutique Section-->
+    </div>
+
+    <!-- Produit 3 -->
+    <div class="product" data-category="perruques">
+      <img src="img/p2.png" alt="Perruque naturelle">
+      <h3>Perruque naturelle</h3>
+      <p>Lisse / Bouclé / Ondulé / Frisé / Coupe carrée</p>
+      <p class="price">25 000 F CFA</p>
+      <a href="https://wa.me/22872069607?text=Bonjour%20Flex%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20perruques%20naturelles%20(Lisse%2C%20Boucl%C3%A9e%2C%20Ondul%C3%A9e%2C%20Fris%C3%A9e%2C%20Coupe%20Carr%C3%A9e).%20Pourriez-vous%20m%E2%80%99en%20dire%20plus%20ou%20me%20guider%20pour%20l%E2%80%99achat%20%3F%20Merci%20!" class="btn3" target="_blank">
+        <i class="fab fa-whatsapp"></i> Commander
+      </a>
+    </div>
+
+    <!-- Produit 4 -->
+    <div class="product" data-category="barbes">
+      <img src="img/Pousse-barbe.png" alt="Pousse-barbe">
+      <h3>Pousse-barbe</h3>
+      <p>Huile naturelle pour faire pousser la barbe</p>
+      <p class="price">4 000 F CFA</p>
+      <a href="https://wa.me/22872069607?text=Bonjour%20Flex%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20votre%20huile%20naturelle%20pour%20faire%20pousser%20la%20barbe.%20Pourriez-vous%20m%E2%80%99en%20dire%20plus%20ou%20me%20guider%20pour%20l%E2%80%99achat%20%3F%20Merci%20!" class="btn3" target="_blank">
+        <i class="fab fa-whatsapp"></i> Commander
+      </a>
+    </div>
+
+    <!-- Produit 5 -->
+    <div class="product" data-category="meches">
+      <img src="img/meche 2.png" alt="Mèche naturelle">
+      <h3>Mèche naturelle</h3>
+      <p>Brésilien, Péruvien, Indien, Malaisien</p>
+      <p class="price">5 000 F CFA</p>
+      <a href="https://wa.me/22872069607?text=Bonjour%20Flex%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20m%C3%A8ches%20naturelles%20(Brazilien%2C%20Peruvien%2C%20Indien%2C%20Malaysien).%20Pourriez-vous%20m%E2%80%99en%20dire%20plus%20ou%20me%20guider%20pour%20l%E2%80%99achat%20%3F%20Merci%20!" class="btn3" target="_blank">
+        <i class="fab fa-whatsapp"></i> Commander
+      </a>
+    </div>
+
+    <!-- Produit 6 -->
+    <div class="product" data-category="meches">
+      <img src="img/Meche bre on.png" alt="Crochet braids">
+      <h3>Crochet braids</h3>
+      <p>Boucles / Curly / Crépu / Locs / Twists</p>
+      <p class="price">5 000 F CFA</p>
+      <a href="https://wa.me/22872069607?text=Bonjour%20Flex%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20Crochet%20braids%20(Boucles%2C%20Curly%2C%20Cr%C3%A9pu%2C%20Locs%2C%20Twists).%20Pourriez-vous%20m%E2%80%99en%20dire%20plus%20ou%20me%20guider%20pour%20l%E2%80%99achat%20%3F%20Merci%20!" class="btn3" target="_blank">
+        <i class="fab fa-whatsapp"></i> Commander
+      </a>
+    </div>
+
+    <!-- Produit 7 -->
+    <div class="product" data-category="meches">
+      <img src="img/meche 3.png" alt="Mèche">
+      <h3>Mèche</h3>
+      <p>Boucles / Curly / Crépu / Locs / Twists</p>
+      <p class="price">3 000 F CFA</p>
+      <a href="https://wa.me/22872069607?text=Bonjour%20Flex%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20m%C3%A8ches%20(Boucles%2C%20Curly%2C%20Cr%C3%A9pu%2C%20Locs%2C%20Twists).%20Pourriez-vous%20m%E2%80%99en%20dire%20plus%20ou%20me%20guider%20pour%20l%E2%80%99achat%20%3F%20Merci%20!" class="btn3" target="_blank">
+        <i class="fab fa-whatsapp"></i> Commander
+      </a>
+    </div>
+
+    <!-- Produit 8 -->
+    <div class="product" data-category="meches">
+      <img src="img/meches naturelles 1.png" alt="Mèche naturelle">
+      <h3>Mèche naturelle</h3>
+      <p>Naturelle (blonde / noire)</p>
+      <p class="price">5 000 F CFA</p>
+      <a href="https://wa.me/22872069607?text=Bonjour%20Flex%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20m%C3%A8ches%20naturelles%20(blonde%20et%20noire).%20Pourriez-vous%20m%E2%80%99en%20dire%20plus%20ou%20me%20guider%20pour%20l%E2%80%99achat%20%3F%20Merci%20!" class="btn3" target="_blank">
+        <i class="fab fa-whatsapp"></i> Commander
+      </a>
+    </div>
+
+  </div>
+</section>
+<!-- End Boutique Section -->
+
 
         <!-- Start A propos Section-->
     <section class="apropos" id="apropos">
@@ -554,7 +567,7 @@
         </section>
       <!-- End Promotion Section-->
     <!-- Start Ateliers Section-->
-    <section class="ateliers" id="ateliers">
+     <section class="ateliers" id="ateliers">
       <div class="ateliers-content">
         <div class="section-title">
           <h1>Salons</h1>
@@ -695,7 +708,7 @@
      </section>
     <!-- End Ateliers Section-->
      <!-- Start Temoignages Section-->
-     <section class="temoignages" id="temoignages">
+     <!-- <section class="temoignages" id="temoignages">
       <div class="temoignages-content">
         <div class="section-title">
           <h1 id="temoignages">Temoignages</h1>
@@ -776,7 +789,7 @@
           </div>
             </div>
           </div>
-     </section>
+     </section>-->
       <!-- End Temoignages Section-->
       <!-- Start Footer Section-->
      <footer class="footer" id="contact">
@@ -784,9 +797,11 @@
         <div class="footer data">
           <h1><a href=""><img src="img/logo new2.1re.png"></a></h1>
           <div class="footer-data-social">
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-solid fa-envelope"></i></a>
-            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61574976346783"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=flex55505@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+             <a href="https://www.tiktok.com/@flex228tg" target="_blank">
+    <i class="fa-brands fa-tiktok"></i>
+  </a>
           </div>
         </div>
         <div class="footer-data">
@@ -799,12 +814,12 @@
         </div>
         <div class="footer-data">
           <h2>Contacts</h2>
-          <p> (+228) 90 61 69 89</p>
-          <p> (+228) 99 99 99 99</p>
+          <p> (+228) 72 06 96 07</p>
+          <p> (+228) 99 75 71 44</p>
         </div>
       </div>
         <div class="copy">
-          <p>&copy; 2025 Boss Coiffure Tous droits réservés</p>
+          <p>&copy; 2025 Flex Tous droits réservés</p>
           <span>created by innemmarus ❤️ </span>
       </div>
      </footer>

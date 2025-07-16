@@ -481,17 +481,12 @@ body{
     height: 100vh;
     background-color: var(--main-color);
     border-radius: 0 0 240px 0;
-    overflow: hidden;
-    animation: fadeIn 1.2s ease-in-out;
 }
 .container{
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 2rem 1rem;
-    animation: slideUp 1s ease forwards;
 }
 .accueil .accueil-img img{ 
     width:100%;
@@ -499,10 +494,6 @@ body{
     border-radius: 12vh;
     transform: scale(0.9);
     margin-top:-5rem;
-    transition: transform 0.5s ease;
-}
-.accueil-img img:hover {
-    transform: scale(1);
 }
 .accueil .accueil-content{
     width:48%;
@@ -511,7 +502,6 @@ body{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    animation: fadeIn 1.5s ease-in-out;
     /*margin-top: -1rem;*/
     margin-left: 1rem;
 }
@@ -522,7 +512,6 @@ body{
     letter-spacing: 4px; 
     color: var(--first-color);
     margin: bottom 1.5em; ;
-    animation: slideRight 0.8s ease-in-out;
 }
 .accueil-content h2{
     font-size: var(--normal-font-size);
@@ -539,43 +528,7 @@ body{
     letter-spacing: 2px;
     color: var(--black-color);
     margin: bottom 1.2rem;
-    animation: fadeInText 1s ease-in-out;
 }
-.scrolling-text {
-  white-space: nowrap;
-  display: inline-block;
-  animation: scrollBanner 20s linear infinite;
-  color: #fff;
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-/* Animations */
-@keyframes scrollBanner {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInText {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes slideUp {
-  0% { transform: translateY(60px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes slideRight {
-  0% { transform: translateX(-40px); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
-}
-
 /* End Accueil Section */
 /* Start A propos Section */
 .apropos{
@@ -1499,7 +1452,6 @@ margin-bottom: 1rem;
         width: 95%;
     }
 }
-
 .dropdown-menu {
     display: none;
     top: 100%;
@@ -1529,34 +1481,6 @@ margin-bottom: 1rem;
   }
  
 
-  .dropdown {
-    position: relative;
-  }
-  
-  .dropdown-toggle {
-    background: transparent;
-    border: none;
-    font-size: var(--normal-font-size);
-    font-weight: bold;
-    color: var(--black-color);
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-  }
-  @media (max-width: 920px) {
-    .dropdown-menu {
-      position: static;
-      background: var(--main-color);
-      border: none;
-      box-shadow: none;
-    }
-  
-    .dropdown-menu a {
-      color: var(--black-color);
-    }
-    .dropdown:hover .dropdown-menu {
-        display: block;
-      }
-  }
 
 
 

@@ -1,11 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error</title>
+  <meta charset="UTF-8">
+  <title>Menu déroulant mobile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+:root {
+  --black-color: #000;
+  --main-color: #f8f8f8;
+  --white-color: #fff;
+  --normal-font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: var(--main-color);
+  padding: 10px 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-link, .btnlogin, .dropdown-toggle {
+  text-decoration: none;
+  color: var(--black-color);
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: var(--normal-font-size);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btnlogin {
+  background-color: #222;
+  color: white;
+  border-radius: 5px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  background-color: var(--white-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: var(--black-color);
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+/* Toggle menu (hamburger) */
+.nav-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  .nav-link,
+  .btnlogin,
+  .dropdown-toggle {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+  }
+
+  .nav-toggle {
+    display: block;
+    color: var(--black-color);
+  }
+}
+
+  </style>
 </head>
 <body>
-    <h1>La connexion a échoué</h1>
+
+    <header class="header" id="header">
+      <div class="navbar">
+        <div class="logo">
+          <img src="img/logo new2re.png" />
+        </div>
+        <nav class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li><a href="#" class="nav-link active">accueil</a></li>
+            <li><a href="#reservation" class="nav-link">Services</a></li>
+            <li><a href="#boutique" class="nav-link">boutique</a></li>
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Découvrir plus ▼</a>
+              <ul class="dropdown-menu">
+                <li><a href="#apropos">A propos</a></li>
+                <li><a href="#promotion">Promotions</a></li>
+                <li><a href="#ateliers">Salons</a></li>
+                <li><a href="#temoignages">Témoignages</a></li>
+              </ul>
+            </li>
+            
+            <li><a href="#contact" class="nav-link">contacts</a></li>
+            <li><a href="./login.html" class="btnlogin">Connexion</a></li>
+          </ul>
+
+        </nav>
+
+        <div class="nav-toggle" id="nav-toggle">
+            <!-- Icône Bars-->
+            <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navToggle = document.getElementById("nav-toggle");
+    const navMenu = document.getElementById("nav-menu");
+    const dropdownToggle = document.querySelector(".dropdown-toggle");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+
+    // Menu responsive toggle
+    navToggle.addEventListener("click", function () {
+      navMenu.classList.toggle("show");
+    });
+
+    // Dropdown toggle
+    dropdownToggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      dropdownMenu.classList.toggle("show");
+    });
+
+    // Click outside to close dropdown
+    document.addEventListener("click", function () {
+      dropdownMenu.classList.remove("show");
+    });
+
+    // Prevent dropdown from closing when clicking inside
+    dropdownMenu.addEventListener("click", function (e) {
+      e.stopPropagation();
+    });
+  });
+</script>
+
+
 </body>
 </html>

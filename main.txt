@@ -88,23 +88,6 @@ function filterProducts() {
     });
 }
 
-const dropdownBtn = document.querySelector('.dropdown-toggle');
-const dropdownMenu = document.querySelector('.dropdown-menu');
-
-dropdownBtn.addEventListener('click', function (e) {
-  e.preventDefault();
-  e.stopPropagation();
-  dropdownMenu.classList.toggle('show');
-});
-
-dropdownMenu.addEventListener('click', function (e) {
-  e.stopPropagation(); // éviter la fermeture immédiate
-});
-
-document.addEventListener('click', function () {
-  dropdownMenu.classList.remove('show');
-});
-
 
 
 
