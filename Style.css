@@ -655,7 +655,7 @@ body{
 /* End A propos Section */
 /* Start Reservation Section */
 .reservation{
-    
+    margin-top: 2rem;
     width: 100%;
     padding: 7rem 0;
     background-color: var(--main-color);
