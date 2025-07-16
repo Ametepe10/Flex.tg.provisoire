@@ -39,7 +39,7 @@ body{
 }
 /* Buttons */
 .btn{
-    width: 240px;
+    width: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,7 +52,7 @@ body{
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1rem;
-    padding: 10px 20px;
+    padding: 5px 10px;
     cursor: pointer;
     transition: all 0.4s ease;
 }
@@ -61,7 +61,7 @@ body{
     color: var(--first-color);
 }
 .btn-outline{
-    width: 280px;
+    width: 260px;
     background-color: transparent;
     color: var(--first-color);
     padding: 5px 10px 5px 0;
@@ -73,7 +73,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    width: 25%;
+    width: 20%;
     height: 100%;
     background-color: var(--first-color);
     border: 1px solid var(--first-color);
@@ -81,7 +81,7 @@ body{
     transition: all 0.4s ease-in-out;
 }
 .btn-outline i{
-    margin-right: 2rem;
+    margin-right: 0.5rem;
     font-size: var(--h3-font-size);
     color: var(--white-color);
     z-index: 10;
@@ -655,7 +655,7 @@ body{
 /* End A propos Section */
 /* Start Reservation Section */
 .reservation{
-    margin-top: 2rem;
+    margin-top: 3rem;
     width: 100%;
     padding: 7rem 0;
     background-color: var(--main-color);
@@ -1565,5 +1565,37 @@ margin-bottom: 1rem;
     max-width: 100%;
     width: 90%;
 }*/
+
+@media screen and (max-width: 768px) {
+  .accueil {
+    flex-direction: column;
+    height: auto;
+    border-radius: 0 0 120px 0;
+  }
+
+  .accueil .accueil-content {
+    width: 100%;
+    height: auto;
+    margin: 2rem 0 0 0;
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .accueil .accueil-img {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .accueil-content a.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    width: auto;
+  }
+}
+
+
 
 /* --- Mes Mises à jour --- */
